@@ -4,18 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
-    [Tooltip("In ms^-1")][SerializeField] float speed = 20f;
+    // TODO work out why sometimes slow on first play of scene
+
+    [Header("General")]
+    [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 20f;
     [Tooltip("In m")] [SerializeField] float xRange = 5f;
     [Tooltip("In m")] [SerializeField] float yRange = 3f;
 
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float positionYawFactor = 5f;
+
+    [Header("Control-throw Based")]
+    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -20f;
 
     float xThrow, yThrow;
+    bool isControlEnabled = true;
+    [SerializeField] GameObject deathFX;
 
 	void Start () {
 		
@@ -33,11 +41,27 @@ public class Player : MonoBehaviour {
 
     void Update ()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
     }
 
-    
+    public void StopMovement()
+    {
+        isControlEnabled = false;
+        controlSpeed = 0;
+    }
+
+    void OnPlayerDeath() //Called by String reference
+    {
+        print("Controls Frozen!");
+        StopMovement();
+        //deathFX.SetActive(true);
+    }
+
+
 
     private void ProcessRotation()
     {
@@ -58,8 +82,8 @@ public class Player : MonoBehaviour {
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
-        float xOffset = xThrow * speed * Time.deltaTime;
-        float yOffset = yThrow * speed * Time.deltaTime;
+        float xOffset = xThrow * controlSpeed * Time.deltaTime;
+        float yOffset = yThrow * controlSpeed * Time.deltaTime;
 
         float rawXPos = transform.localPosition.x + xOffset;
         float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);

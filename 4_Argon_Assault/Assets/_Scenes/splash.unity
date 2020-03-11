@@ -241,7 +241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2142212280
 MonoBehaviour:
@@ -285,17 +285,17 @@ PrefabInstance:
     - target: {fileID: 8711041266447074074, guid: b9f144c1db293044390b188e49667b94,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8711041266447074074, guid: b9f144c1db293044390b188e49667b94,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8711041266447074074, guid: b9f144c1db293044390b188e49667b94,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8711041266447074074, guid: b9f144c1db293044390b188e49667b94,
         type: 3}
@@ -305,7 +305,7 @@ PrefabInstance:
     - target: {fileID: 8711041266447074074, guid: b9f144c1db293044390b188e49667b94,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8711041266447074074, guid: b9f144c1db293044390b188e49667b94,
         type: 3}
@@ -321,6 +321,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711041266447074073, guid: b9f144c1db293044390b188e49667b94,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.318
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711041266447074073, guid: b9f144c1db293044390b188e49667b94,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.28055555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711041266447074073, guid: b9f144c1db293044390b188e49667b94,
+        type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711041266447074073, guid: b9f144c1db293044390b188e49667b94,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9f144c1db293044390b188e49667b94, type: 3}

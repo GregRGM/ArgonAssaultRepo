@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Invoke("LoadFirstScene", 2f);
+        Invoke("LoadFirstScene", 10f);
     }
 
     void LoadFirstScene()
