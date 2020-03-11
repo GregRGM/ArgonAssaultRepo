@@ -17,17 +17,27 @@ public class Player : MonoBehaviour {
 
     float xThrow, yThrow;
 
-	// Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("Player hit thing!");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("Player triggered thing!");
+    }
+
+    void Update ()
     {
         ProcessTranslation();
         ProcessRotation();
     }
+
+    
 
     private void ProcessRotation()
     {

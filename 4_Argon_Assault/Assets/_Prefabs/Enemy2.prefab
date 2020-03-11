@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7596003602981368878
+--- !u!1001 &6603579959586369239
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -71,11 +71,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
+      objectReference: {fileID: 4300000, guid: 8ef084a5ecdcca845a7ffa7b421ecff0, type: 3}
     - target: {fileID: 5159263147581493661, guid: 962b1db68f7894f4da9bd52213acbbbc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2954963d08a0b044e8f84eece7126e53, type: 2}
+      objectReference: {fileID: 2100000, guid: fd3f9dbeae2c3af4f8eb51a9285ab7ef, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 962b1db68f7894f4da9bd52213acbbbc, type: 3}
