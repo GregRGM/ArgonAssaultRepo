@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] GameObject deathFX;
 
 	void Start () {
-		
+        DeactivateGuns();
 	}
 
     private void OnCollisionEnter(Collision collision)
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour {
 
     void ProcessFiring()
     {
-        if(CrossPlatformInputManager.GetButton("Fire"))
+        if(CrossPlatformInputManager.GetButton("Fire1"))
         {
             ActivateGuns();
         }
